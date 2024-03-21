@@ -1,10 +1,7 @@
 const express = require("express");
 const app = express();
 const app2 = express();
-function randomIntFromInterval(min, max) { // min and max included 
-  return Math.floor(Math.random() * (max - min + 1) + min)
-}
-const port = randomIntFromInterval(6000, 8000);
+const port = 8000;
 // const port2 = 5001;
 
 app.get("/", (req, res) => res.type('html').send(html));
