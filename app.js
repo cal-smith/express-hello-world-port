@@ -1,15 +1,16 @@
 const express = require("express");
 const app = express();
-// const app2 = express();
+const app2 = express();
 // const port = new Date().getMinutes()+1000;
-// const port2 = 5001;
+const port = 5000;
+const port2 = 5001;
 
 app.get("/", (req, res) => res.type('html').send(html));
 
-// app2.get("/", (req, res) => res.type('html').send(html));
+app2.get("/", (req, res) => res.type('html').send(html));
 
-const server = app.listen(0, () => console.log(`Example app listening on port ${server.address().port}!`));
-// const server2 = app.listen(port2, () => console.log(`Example app listening on port ${port2}!`));
+const server = app.listen(port, () => console.log(`Example app listening on port ${server.address().port}!`));
+const server2 = app.listen(port2, () => console.log(`Example app listening on port ${port2}!`));
 
 server.keepAliveTimeout = 120 * 1000;
 server.headersTimeout = 120 * 1000;
